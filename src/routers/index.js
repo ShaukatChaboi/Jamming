@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
-import HomePage from "../pages/homepage";
-import LoginPage from "../pages/login";
-import SignupPage from "../pages/signup";
+import Footer from "../components/footer/index";
+import Navbar from "../components/navbar/index";
+import HomePage from "../pages/homepage/index";
+import LoginPage from "../pages/login/index";
+import SignupPage from "../pages/signup/index";
 
 const Routers = () => {
   return (
