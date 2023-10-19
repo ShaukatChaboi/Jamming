@@ -1,10 +1,15 @@
 import "./App.css";
-import Routers from "./routers";
+// import Routers from "./routers";
+import Navbar from "./components/navbar/index";
+import SearchInput from './components/SearchInput/SearchInput'
 
 function App() {
   return (
         <div className="App">
-          <Routers />
+          <Navbar/>
+          
+      <SearchInput />
+          {/* <Routers /> */}
         </div>
       );
 }
