@@ -1,7 +1,15 @@
 .App {
+  background-image: url(../public//bg.jpg);
   text-align: center;
-}
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: Work Sans, sans-serif;
+  font-weight: 500;
+  height: 100%;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,6 +40,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
