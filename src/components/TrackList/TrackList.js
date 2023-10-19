@@ -1,11 +1,11 @@
 import React from "react";
 
-// import Track from "../Track/Track";
+import Track from "../Track/Tracks";
 
 const TrackList = (props) => {
   return (
     <div className="w-[100%]">
-      {/* {props.tracks.map((track) => {
+      {props?.tracks?.map((track) => {
         return (
           <Track
             track={track}
@@ -15,7 +15,7 @@ const TrackList = (props) => {
             onRemove={props.onRemove}
           />
         );
-      })} */}
+      })}
     </div>
   );
 };

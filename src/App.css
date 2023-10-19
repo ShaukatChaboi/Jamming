@@ -4,11 +4,10 @@
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  padding:0 17% 10% 17%;
   color: #fff;
   font-family: Work Sans, sans-serif;
   font-weight: 500;
-  height: 100vh;
-
 }
 .App-logo {
   height: 40vmin;
