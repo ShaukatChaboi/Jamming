@@ -3,7 +3,7 @@ import TrackList from "../TrackList/TrackLists";
 
 const SearchResult = (props) => {
   return (
-    <div className=" w-[50%] rounded-[5px] h-[950px] p-[0.88rem] bg-[#010c3fb3] shadow-Jamming-950 ">
+    <div className=" w-[50%] rounded-[5px] h-[950px] p-[0.88rem] bg-[#010c3fb3] shadow-Jamming-950 bg-opacity-70 ">
       <h2>Results</h2>
       <TrackList tracks={props.searchResults} onAdd={props.onAdd} />
     </div>
