@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "../components/footer/index";
 import Navbar from "../components/navbar/index";
 import HomePage from "../pages/homepage/index";
 const Routers = () => {
