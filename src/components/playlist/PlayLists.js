@@ -4,10 +4,11 @@ import TrackList from "../TrackList/TrackLists";
 
 const Playlist = (props) => {
   const [searchValue, setSearchValue] = useState([]);
+  
   const handleNameChange = (event) => {
     const searchedValue = event.target.value;
     setSearchValue(searchedValue);
-    console.log(searchedValue, 'valueeee');
+    console.log(searchedValue, "valueeee");
   };
   //   const handleNameChange = useCallback(
   //     (event) => {
@@ -17,14 +18,12 @@ const Playlist = (props) => {
   //   );
 
   return (
-    <div className="flex flex-col items-center  w-[37%] rounded-[5px] max-h-[950px] py-[2.27rem] px-[1.16rem] bg-[#010c3fb3] shadow-md">
-      {/* <div className="flex flex-col items-center overflow-y-scroll w-2/5 max-h-96 p-6 bg-opacity-70 bg-blue-900 shadow-md"> */}
+    <div className="flex flex-col items-center  w-[37%] rounded-[5px] max-h-[950px] py-[2.27rem] px-[1.16rem] bg-[#010c3fb3] shadow-Jamming-950">
       <input
         // value={searchValue}
         onChange={handleNameChange}
         defaultValue={"New Playlist"}
         className="w-full border-0 outline-[0] bg-[transparent] border-b border-[#6f6f6f] text-[#fff] text-[1.55rem]"
-        // className="w-full border-0 outline-none bg-transparent border-b border-gray-400 text-white text-xl"
       />
       <TrackList
         tracks={props.playlistTracks}
