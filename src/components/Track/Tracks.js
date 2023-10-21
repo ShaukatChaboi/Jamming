@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 
-
 const Track = (props) => {
   const addTrack = useCallback(
     (event) => {
@@ -16,30 +15,30 @@ const Track = (props) => {
     [props.onRemove, props.track]
   );
 
-  const renderAction = () => {
+  const render = () => {
     if (props.isRemoval) {
       return (
-        <button className="Track-action" onClick={removeTrack}>
+        <button className="font-bold" onClick={removeTrack}>
           -
         </button>
       );
     }
     return (
-      <button className="Track-action" onClick={addTrack}>
+      <button className="font-bold" onClick={addTrack}>
         +
       </button>
     );
   };
 
   return (
-    <div className="Track">
+    <div className="flex justify-between border-b border-solid text-left">
       <div className="Track-information">
         <h3>{props.track.name}</h3>
         <p>
           {props.track.artist} | {props.track.album}
         </p>
       </div>
-      {renderAction()}
+      {render()}
     </div>
   );
 };

@@ -31,7 +31,7 @@ const Playlist = (props) => {
         onRemove={props.onRemove}
       />
       <button
-        className="cursor-pointer w-[10rem] py-[0.77rem] px-[0] rounded-full border-0 mt-5 bg-[#6c41ec] text-center text-[0.83rem] transition duration-250 bg-white font-semibold hover:bg-[#6c41e9b3] text-white"
+        className="cursor-pointer w-[10rem] lg:w-90 py-[0.77rem] px-[0] rounded-full border-0 mt-5 bg-[#6c41ec] text-center text-[0.83rem] transition duration-250 bg-white font-semibold hover:bg-[#6c41e9b3] text-white"
         onClick={props.onSave}
       >
         SAVE TO SPOTIFY

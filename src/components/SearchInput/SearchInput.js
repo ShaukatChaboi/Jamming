@@ -28,7 +28,7 @@ import React, { useState, useCallback } from "react";
   
   return (
     <>
-      <div className="flex items-center flex-col mb-100  pt-40 mb-8">
+      <div className="flex items-center flex-col items-center mb-100  pt-30 mb-8">
         <input
           onChange={handleTermChange}
           onKeyUp={handleKeyUp}
