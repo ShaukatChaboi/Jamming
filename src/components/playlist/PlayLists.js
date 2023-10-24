@@ -1,24 +1,24 @@
 // import React from "react";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import TrackList from "../TrackList/TrackLists";
 
 const Playlist = (props) => {
-  const [searchValue, setSearchValue] = useState([]);
-  
-  const handleNameChange = (event) => {
-    const searchedValue = event.target.value;
-    setSearchValue(searchedValue);
-    console.log(searchedValue, "valueeee");
-  };
-  //   const handleNameChange = useCallback(
-  //     (event) => {
-  //       props.onNameChange(event.target.value);
-  //     },
-  //     [props.onNameChange]
-  //   );
+  // const [searchValue, setSearchValue] = useState([]);
 
+  // const handleNameChange = (event) => {
+  //   const searchedValue = event.target.value;
+  //   setSearchValue(searchedValue);
+  //   console.log(searchedValue, "valueeee");
+  // };
+
+  const handleNameChange = useCallback(
+    (event) => {
+      props.onNameChange(event.target.value);
+    },
+    [props.onNameChange]
+  );
   return (
-    <div className="flex flex-col items-center  w-[37%] rounded-[5px] max-h-[950px] py-[2.27rem] px-[1.16rem] bg-[#010c3fb3] shadow-Jamming-950">
+    <div className="flex flex-col items-center  md:w-[37%] xs:w-[50%] my-8 md:my-[unset] rounded-[5px] xs:max-h-[950px] md:h-[950px] py-[2.27rem] px-[1.16rem] bg-[#010c3fb3] shadow-Jamming-950">
       <input
         // value={searchValue}
         onChange={handleNameChange}
