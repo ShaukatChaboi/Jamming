@@ -50,12 +50,12 @@ function HomePage() {
     Swal.fire(title, message, icon);
   };
 
-  const addTrack = (track) => {
+  const addTrack = (track) => { 
     if (playlistTracks.find((savedTrack) => savedTrack.id === track.id)) {
       return;
     }
     const newPlaylistTrack = [...playlistTracks];
-    newPlaylistTrack.push(track);
+    newPlaylistTrack.push(track); 
     setPlaylistTracks(newPlaylistTrack);
   };
 
@@ -63,22 +63,22 @@ function HomePage() {
     const newPlaylistTrack = playlistTracks.filter(
       (savedTrack) => savedTrack.id !== track.id
     );
-    setPlaylistTracks(newPlaylistTrack);
+    setPlaylistTracks(newPlaylistTrack); 
   };
 
-  const updatePlaylistName = (newName) => {
+  const updatePlaylistName = (newName) => { 
     setPlaylistName(newName);
   };
 
-  const savePlaylist = async () => {
+  const savePlaylist = async () => { 
     const tracksUris = playlistTracks.map((track) => track.uri);
     const noTracks = tracksUris.length === 0;
-    const noPlaylistName = playlistName.trim() === "";
+    const noPlaylistName = playlistName.trim() === ""; 
     if (!noTracks && !noPlaylistName) {
       await Spotify.savePlaylist(playlistName, tracksUris);
 
-      setPlaylistName("Playlist Name");
-      setPlaylistTracks([]);
+      setPlaylistName("Playlist Name"); 
+      setPlaylistTracks([]); 
       popupMessage("Saved!", "Playlist saved to your account.", "success");
     } else {
       if (noPlaylistName)
@@ -107,7 +107,7 @@ function HomePage() {
     <div>
       <div className="App">
         <SearchInput onSearch={search} />
-        <div className="flex flex-row justify-between mx-auto py-12">
+        <div className="flex flex-col justify-between mx-auto py-12 md:flex-row">
           <SearchResult onAdd={addTrack} searchResults={searchResults} />
           <Playlist
             onRemove={removeTrack}
